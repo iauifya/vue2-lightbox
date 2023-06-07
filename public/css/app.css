@@ -1,0 +1,132 @@
+* {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #1b1b1b;
+}
+
+.hero {
+  padding-top: 40px;
+}
+
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.postarea {
+  height: 250px;
+  width: 930px;
+  white-space: nowrap;
+}
+
+.postarea .posts {
+  height: 100%;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.postarea .posts .postbox {
+  display: inline-block;
+  height: 100%;
+}
+
+.postarea .posts .postbox .cover {
+  width: 330px;
+  height: 100%;
+  margin-right: 300px;
+  margin-left: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.postarea .posts .postbox .cover .info {
+  color: #fff;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+}
+
+.postarea .posts .postbox .cover .info h2 {
+  font-size: 3rem;
+}
+
+.postarea .posts .postbox .cover .info p {
+  font-size: 1.2rem;
+  text-align: center;
+  background: #fbfbfb;
+  color: black;
+  padding: 4px 12px;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
+}
+
+.postarea .posts .postbox .cover:hover {
+  width: 340px;
+  height: 110%;
+}
+
+.control_left,
+.control_right {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.control_left i,
+.control_right i {
+  color: #fff;
+  vertical-align: middle;
+  left: 20%;
+}
+
+.control_left:hover,
+.control_right:hover {
+  background: #fff;
+}
+
+.control_left:hover i,
+.control_right:hover i {
+  color: #1b1b1b;
+}
+
+.control_left {
+  left: 10%;
+}
+
+.control_right {
+  right: 10%;
+}
+/*# sourceMappingURL=app.css.map */

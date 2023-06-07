@@ -1,0 +1,113 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin trans {
+    transition: all .4s;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(27, 27, 27);
+    // @include flex_center;
+}
+
+.hero {
+    padding-top: 40px;
+}
+
+#app {
+    @include flex_center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.postarea {
+    // border: 1px solid #666;
+    height: 250px;
+    width: 930px;
+    white-space: nowrap;
+    // display: flex;
+    // flex-flow: column nowrap;
+    // justify-content: center;
+    .posts {
+        // display: flex;
+        // border: 1px solid #666;
+        height: 100%;
+        @include trans;
+        .postbox {
+            display: inline-block;
+            height: 100%;
+            .cover {
+                width: 330px;
+                height: 100%;
+                margin-right: 300px;
+                margin-left: 300px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                cursor: pointer;
+                @include flex_center;
+                @include trans;
+                .info {
+                    color: #fff;
+                    transform: translateX(-200px);
+                    text-shadow: 0px 0px 12px rgba(0, 0, 0, .4);
+                    h2 {
+                        font-size: 3rem;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        text-align: center;
+                        background: #fbfbfb;
+                        color: black;
+                        padding: 4px 12px;
+                        box-shadow: 0px 0px 12px rgba(0, 0, 0, .6);
+                    }
+                }
+                &:hover {
+                    width: 340px;
+                    height: 110%;
+                }
+            }
+        }
+    }
+}
+
+.control_left,
+.control_right {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all .2s;
+    i {
+        color: #fff;
+        vertical-align: middle;
+        left: 20%;
+    }
+    &:hover {
+        background: #fff;
+        i {
+            color: rgb(27, 27, 27)
+        }
+    }
+}
+
+.control_left {
+    left: 10%;
+}
+
+.control_right {
+    right: 10%;
+}
